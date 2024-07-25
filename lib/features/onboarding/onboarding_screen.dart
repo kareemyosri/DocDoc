@@ -1,6 +1,8 @@
+import 'package:docdoc/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../core/routing/routes.dart';
 import '../../core/theming/styles.dart';
 import 'widgets/doc_logo_and_name.dart';
 import 'widgets/doctor_image_and_text.dart';
@@ -31,7 +33,9 @@ class OnboardingScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 30.h),
-                    const GetStartedButton(),
+                    CustomTextButton(text:  'Get Started', onPressed: (){
+              context.pushNamed(Routes.loginScreen);
+              }),
                   ],
                 ),
               )
